@@ -5,6 +5,15 @@
 
 This Terraform module, named "labels," is designed to help you manage and apply labels (tags) to AWS resources consistently within your infrastructure. It is particularly useful for adding labels to resources in a standardized way, making it easier to manage, organize, and track resources in your AWS environment.
 
+## Table of Contents
+
+- [Usage](https://github.com/opz0/terraform-aws-labels/edit/readme/README.md#usage)
+- [Inputs](https://github.com/opz0/terraform-aws-labels/tree/readme#inputs)
+- [Outputs](https://github.com/opz0/terraform-aws-labels/tree/readme#outputs)
+- [Examples](https://github.com/opz0/terraform-aws-labels/tree/readme#example)
+- [License](https://github.com/opz0/terraform-aws-labels/tree/readme#license)
+- [Author](https://github.com/opz0/terraform-aws-labels/tree/readme#author)
+
 ## Usage
 
 To use this module in your Terraform configurations, you can include it as follows:
