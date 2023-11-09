@@ -43,7 +43,7 @@ This module does not have any outputs, as it primarily focuses on setting up lab
 For a complete example of how to use this module, please refer to the Usage section above.
 
 # License
-This Terraform module is available under the MIT License. For more details, please see the [LICENSE](https://github.com/opz0/terraform-aws-labels/blob/readme/LICENSE) file.
+This Terraform module is available under the MIT License. For more details, please see the [LICENSE](https://github.com/opz0/terraform-aws-labels/blob/master/LICENSE) file.
 
 # Author
 This module was created by [Your Name] and can be found in [Your GitHub Repository URL].
