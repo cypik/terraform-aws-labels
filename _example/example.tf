@@ -1,5 +1,5 @@
 module "labels" {
-  source = "git::https://github.com/cypik/terraform-aws-labels.git?ref=v1.0.0"
+  source = "./../"
 
   name        = "app"
   environment = "test"
