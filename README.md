@@ -1,5 +1,5 @@
 # terraform-aws-labels
-# Terraform Module: "labels"
+# Terraform Module: labels
 
 ## Overview
 
