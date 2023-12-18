@@ -40,7 +40,7 @@ module "labels" {
 This module does not have any outputs, as it primarily focuses on setting up labels for your resources.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [Examples](https://github.com/cypik/terraform-aws-labels/blob/master/example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [Examples](https://github.com/cypik/terraform-aws-labels/tree/master/example) directory within this repository.
 
 ## License
 This Terraform module is available under the MIT License. For more details, please see the [LICENSE](https://github.com/cypik/terraform-aws-labels/blob/master/LICENSE) file.
