@@ -7,12 +7,12 @@ This Terraform module, named "labels," is designed to help you manage and apply 
 
 ## Table of Contents
 
+- [Introduction](#introduction)
 - [Usage](#usage)
-- [Module Inputs](#module-inputs)
-- [Module Outputs](#module-outputs)
 - [Examples](#examples)
 - [License](#license)
-- [Author](#author)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
 
 ## Usage
 
@@ -20,31 +20,71 @@ To use this module in your Terraform configurations, you can include it as follo
 
 ```hcl
 module "labels" {
-  source      = "https://github.com/cypik/terraform-aws-labels.git"  # Specify the path to the module source directory.
-  name        = "app"    # Set the 'name' label for your resource.
-  environment = "test"   # Set the 'environment' label for your resource.
-  label_order = ["name", "environment"]  # Define the order in which labels should be applied.
-  attributes  = ["private"]  # Specify any additional attributes for your resource.
-  extra_tags = {
-    Application = "Demo"  # You can include extra tags specific to your use case.
+  source      = "Cypik/aws/labels"
+  versions    = "1.0.1"
+  name        = "app"
+  environment = "test"
+  label_order = ["name", "environment"]
+  attributes  = ["private"]
+  extra_tags  = {
+    Application = "Demo"
   }
 }
 ```
-## Module Inputs
-- 'name' (string): The value for the "name" label.
-- 'environment' (string): The value for the "environment" label.
-- 'label_order' (list of strings): Specifies the order in which labels should be applied.
-- 'attributes' (list of strings): Additional attributes for your resource.
-- 'extra_tags' (map of strings): Any extra tags you want to apply to your resource.
-## Module Outputs
-This module does not have any outputs, as it primarily focuses on setting up labels for your resources.
 
 ## Examples
 For detailed examples on how to use this module, please refer to the [Examples](https://github.com/cypik/terraform-aws-labels/tree/master/example) directory within this repository.
 
 ## License
-This Terraform module is available under the MIT License. For more details, please see the [LICENSE](https://github.com/cypik/terraform-aws-labels/blob/master/LICENSE) file.
+This Terraform module is available under the **MIT** License. For more details, please see the [LICENSE](https://github.com/cypik/terraform-aws-labels/blob/master/LICENSE) file.
 
 ## Author
 Your Name
-Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **Cypik** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.6 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.48.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_attributes"></a> [attributes](#input\_attributes) | Additional attributes (e.g. `1`). | `list(string)` | `[]` | no |
+| <a name="input_delimiter"></a> [delimiter](#input\_delimiter) | Delimiter to be used between `organization`, `name`, `environment` and `attributes`. | `string` | `"-"` | no |
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | Set to false to prevent the module from creating any resources. | `bool` | `true` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
+| <a name="input_extra_tags"></a> [extra\_tags](#input\_extra\_tags) | Additional tags (e.g. map(`BusinessUnit`,`XYZ`). | `map(string)` | `{}` | no |
+| <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'cypik'. | `string` | `"cypik"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `""` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_attributes"></a> [attributes](#output\_attributes) | Normalized attributes. |
+| <a name="output_environment"></a> [environment](#output\_environment) | Normalized environment |
+| <a name="output_id"></a> [id](#output\_id) | Disambiguated ID. |
+| <a name="output_label_order"></a> [label\_order](#output\_label\_order) | Normalized Tag map. |
+| <a name="output_name"></a> [name](#output\_name) | Normalized name. |
+| <a name="output_repository"></a> [repository](#output\_repository) | Terraform current module repo |
+| <a name="output_tags"></a> [tags](#output\_tags) | Normalized Tag map. |
+<!-- END_TF_DOCS -->
