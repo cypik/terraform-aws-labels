@@ -1,5 +1,5 @@
-# terraform-aws-labels
-# Terraform Module: labels
+# Terraform-aws-labels
+#  Terraform AWS Cloud Labels Module
 
 ## Overview
 
@@ -13,6 +13,9 @@ This Terraform module, named "labels," is designed to help you manage and apply 
 - [License](#license)
 - [Inputs](#inputs)
 - [Outputs](#outputs)
+
+## Introduction
+This Terraform module creates an AWS labels (labels) along with additional configuration options.
 
 ## Usage
 
