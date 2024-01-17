@@ -23,8 +23,8 @@ To use this module in your Terraform configurations, you can include it as follo
 
 ```hcl
 module "labels" {
-  source      = "Cypik/aws/labels"
-  versions    = "1.0.1"
+  source      = "cypik/labels/aws"
+  version     = "1.0.1"
   name        = "app"
   environment = "test"
   label_order = ["name", "environment"]
