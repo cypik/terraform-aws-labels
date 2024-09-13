@@ -12,7 +12,7 @@ variable "environment" {
 
 variable "repository" {
   type        = string
-  default     = ""
+  default     = "https://github.com/cypik/terraform-aws-labels"
   description = "Terraform current module repo"
 }
 
@@ -36,8 +36,8 @@ variable "extra_tags" {
 
 variable "managedby" {
   type        = string
-  default     = "cypik"
-  description = "ManagedBy, eg 'cypik'."
+  default     = "info@cypik.com"
+  description = "ManagedBy, eg 'info@cypik.com'"
 }
 
 variable "enabled" {
