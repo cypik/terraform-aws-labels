@@ -24,10 +24,12 @@ To use this module in your Terraform configurations, you can include it as follo
 ```hcl
 module "labels" {
   source      = "cypik/labels/aws"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = "app"
   environment = "test"
   label_order = ["name", "environment"]
+  managedby   = "info@cypik.com"
+  repository  = "https://github.com/cypik/terraform-aws-labels"
   attributes  = ["private"]
   extra_tags  = {
     Application = "Demo"
@@ -75,9 +77,9 @@ No resources.
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_extra_tags"></a> [extra\_tags](#input\_extra\_tags) | Additional tags (e.g. map(`BusinessUnit`,`XYZ`). | `map(string)` | `{}` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'cypik'. | `string` | `"cypik"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'info@cypik.com' | `string` | `"info@cypik.com"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `""` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/cypik/terraform-aws-labels"` | no |
 
 ## Outputs
 
