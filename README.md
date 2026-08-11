@@ -24,7 +24,7 @@ To use this module in your Terraform configurations, you can include it as follo
 ```hcl
 module "labels" {
   source      = "cypik/labels/aws"
-  version     = "1.0.2"
+  version     = "1.0.3"
   name        = "app"
   environment = "test"
   label_order = ["name", "environment"]
@@ -52,8 +52,8 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.58.8 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.58.0 |
 
 ## Providers
 
